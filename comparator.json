@@ -1,0 +1,18 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "PretorsionImageClosed.Challenge.theoremA",
+    "PretorsionImageClosed.Challenge.completeLattice",
+    "PretorsionImageClosed.Challenge.gandhiPretorsion",
+    "PretorsionImageClosed.Challenge.gandhiImageClosed",
+    "PretorsionImageClosed.Challenge.theoremBPretorsion",
+    "PretorsionImageClosed.Challenge.theoremBImageClosed"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

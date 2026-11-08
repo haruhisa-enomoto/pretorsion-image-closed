@@ -1,0 +1,19 @@
+{
+ "PretorsionImageClosed/ConvexGeometry/Basic.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/ConvexGeometry/ClosedSets.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/ConvexGeometry/Compact.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/ConvexGeometry/CompletelyJoinIrreducible.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/ConvexGeometry/Finite.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/IndecomposableClosures/Decomposition.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/IndecomposableClosures/EndomorphismRadical.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/IndecomposableClosures/ModuleTraces.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/IndecomposableClosures/Presentations.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/IndecomposableClosures/QuotientAntiExchange.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/IndecomposableClosures/Skeleton.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/IndecomposableClosures/SplitInjective.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/IndecomposableClosures/SplitProjective.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/IndecomposableClosures/Subcategories.lean": "quotient-submodule-equidistribution (the InAdd lemmas; the rest is new)",
+ "PretorsionImageClosed/IndecomposableClosures/SubmoduleAntiExchange.lean": "quotient-submodule-equidistribution",
+ "PretorsionImageClosed/Modules/IndecomposableModule.lean": "Tau Ceti (via quotient-submodule-equidistribution)",
+ "PretorsionImageClosed/Modules/LocalRingIdempotents.lean": "Tau Ceti (via quotient-submodule-equidistribution)"
+}

@@ -1,0 +1,165 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Pretorsion theories and image-closed subcategories"
+  description: >-
+    A Lean 4 formalization, built on Mathlib, of the paper Pretorsion theories and
+    image-closed subcategories. For a finite-dimensional algebra Λ over a field, a
+    subcategory Z of mod Λ is image-closed iff Z = Gen Z ∩ Cogen Z iff Z = T ∩ F for
+    a pretorsion theory (T, F) (Theorem A), and the pretorsion theories of mod Λ
+    form a complete lattice with the meets and joins of the paper (Theorem 3.6).
+    For the linearly oriented quiver 1 → ⋯ → n, the pretorsion theories counted by
+    the number of indecomposables in T ∩ F, and the image-closed subcategories
+    counted by their number of indecomposables, are enumerated by the q-Gandhi
+    polynomials B_{n+1}(1, q) and C_{n+1}(1, q) of Han and Zeng (Theorem B), with
+    the two-variable refinements of Theorems 7.5 and 8.5. The library also proves
+    the other numbered statements of the paper, including the convex geometry of
+    image closure (Section 4.3), and the cited inputs they use.
+  authors: ["Haruhisa Enomoto"]
+  responsible_maintainers: ["Haruhisa Enomoto"]
+  license: "Apache-2.0"
+
+classification:
+  msc2020: ["16G20", "18E40", "05A15"]
+
+sources:
+  - title: "Pretorsion theories and image-closed subcategories"
+    authors: ["Haruhisa Enomoto"]
+    type: "paper"
+    location: "Manuscript of November 8, 2026, not yet posted; identified by SHA-256 in docs/MANUSCRIPT.md"
+    relationship: "formalizes"
+    note: >-
+      The formalized paper, researched under the author's direction with
+      GPT-5.6-Sol and GPT-6-Astra and written with GPT-6-Astra, Claude Opus 5.5
+      and Gemini 4 Argon. Statements are matched with Lean declarations in
+      docs/PAPER-CORRESPONDENCE.md.
+    author_endorsement: "participated"
+  - title: "q-Polynômes de Gandhi et statistique de Denert"
+    authors: ["G.-N. Han", "J. Zeng"]
+    type: "paper"
+    location: "Discrete Math. 205 (1999), 119–143"
+    relationship: "background"
+    note: >-
+      Source of the q-Gandhi polynomials of the first kind B_m, defined in
+      Statement.lean by the recurrence of Definition 1.1 of the paper. The
+      specialization B_m(1,1) = g_{2m+2} is not formalized.
+    author_endorsement: "not-contacted"
+  - title: "On a q-sequence that generalizes the median Genocchi numbers"
+    authors: ["G.-N. Han", "J. Zeng"]
+    type: "paper"
+    location: "Ann. Sci. Math. Québec 23 (1999), no. 1, 63–72"
+    relationship: "background"
+    note: >-
+      Source of the q-Gandhi polynomials of the second kind C_m, defined in
+      Statement.lean by the recurrence of Definition 1.1 of the paper. The
+      specialization C_m(1,1) = H_{2m+1} is not formalized.
+    author_endorsement: "not-contacted"
+
+related_formalizations:
+  - id: "https://github.com/haruhisa-enomoto/quotient-submodule-equidistribution"
+    relationship: "adapts"
+    note: >-
+      14 modules adapted for Section 4.3 (convex geometries, indecomposable
+      skeletons, anti-exchange, relative split projectives and injectives), from
+      commit 20ee4b9; see VENDORED.md and verification/module-origins.json.
+  - id: "https://github.com/TauCetiProject/TauCeti"
+    relationship: "adapts"
+    note: >-
+      2 modules (indecomposable modules and Fitting's lemma; idempotents of local
+      rings) from the development state of commit eeb5b4b (not a published
+      revision), through quotient-submodule-equidistribution, with copyright
+      headers kept; see VENDORED.md.
+
+status:
+  scope: >-
+    Theorem A, Theorem 3.6 with the meet and join formulas and the least and
+    greatest elements, Theorems 7.5 and 8.5, and Theorem B, as stated in the paper,
+    for an arbitrary field. The compared statements in Challenge.lean use only
+    Mathlib definitions. Every numbered statement of the paper is covered or
+    recorded as not needed in docs/PAPER-CORRESPONDENCE.md; Section 4.3 is proved
+    in the library but not compared. The identities B_m(1,1) = g_{2m+2} and
+    C_m(1,1) = H_{2m+1} with Genocchi numbers are classical and not formalized.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["Claude Fable 5.1", "Claude Opus 5.5"]
+      framework: "Claude Code"
+      tool_setup: >-
+        An AI coding agent working in a local Lean project with compiler
+        feedback, explicit axiom audits and a statement-by-statement correspondence
+        with the paper, under the author's direction. Section 4.3 reuses an earlier
+        formalization listed in VENDORED.md.
+      cost:
+        wall_time: "About one day of development (November 8, 2026)"
+        spend_usd: "subscription-based"
+        hardware: "Local Linux workstation"
+      prompting_notes: >-
+        The author required the whole paper and its cited inputs to be proved, with
+        Mathlib as the only dependency, and allowed proof routes that differ from
+        the paper.
+  spend_usd: "subscription-based"
+  notes: >-
+    The paper was researched and written with AI models under the author's
+    direction (see PROVENANCE.md). The formalization was written by AI coding
+    agents under the author's direction.
+
+fidelity:
+  divergences: >-
+    The statements are those of the paper. Modules are finite-dimensional right
+    modules, realized as finitely generated modules over Λᵐᵒᵖ; a subcategory is a
+    property of objects closed under isomorphisms, finite direct sums and direct
+    summands, as in the paper's conventions. mod Λ_n is the category of functors
+    from the linear order Fin n to finite-dimensional vector spaces, which the
+    paper identifies with mod Λ_n. Polynomials in q and x live in ℤ[q][x], and
+    Δ_q f is characterized by g · (1 + (q - 1)x) = f(1 + qx) - f(x). Sums over
+    PT(Λ_n) and L_im(Λ_n) come with proofs that these sets are finite. All types
+    live in one universe. Intermediate results are proved for abelian categories
+    with a length function, and some by a different route; docs/proofs lists
+    these. No weakening of the hypotheses or conclusions is known.
+
+review:
+  status: "unreviewed"
+  notes: >-
+    The statements and proofs have not been reviewed by a human expert or by an
+    independent agent audit.
+
+alignment:
+  namespace: "PretorsionImageClosed"
+  statements:
+    - source: "Pretorsion theories and image-closed subcategories, Theorem A (= Theorem 4.4)"
+      lean: "PretorsionImageClosed.Challenge.theoremA"
+      module: "Challenge"
+      status: "proved"
+      note: "Proved in Solution.lean from PretorsionImageClosed.theoremA."
+    - source: "Pretorsion theories and image-closed subcategories, Theorem 3.6"
+      lean: "PretorsionImageClosed.Challenge.completeLattice"
+      module: "Challenge"
+      status: "proved"
+      note: "Proved in Solution.lean from PretorsionImageClosed.completeLattice."
+    - source: "Pretorsion theories and image-closed subcategories, Theorem 7.5"
+      lean: "PretorsionImageClosed.Challenge.gandhiPretorsion"
+      module: "Challenge"
+      status: "proved"
+      note: "Proved in Solution.lean from PretorsionImageClosed.gandhiPretorsion."
+    - source: "Pretorsion theories and image-closed subcategories, Theorem 8.5"
+      lean: "PretorsionImageClosed.Challenge.gandhiImageClosed"
+      module: "Challenge"
+      status: "proved"
+      note: "Proved in Solution.lean from PretorsionImageClosed.gandhiImageClosed."
+    - source: "Pretorsion theories and image-closed subcategories, Theorem B, first identity"
+      lean: "PretorsionImageClosed.Challenge.theoremBPretorsion"
+      module: "Challenge"
+      status: "proved"
+      note: "Proved in Solution.lean from PretorsionImageClosed.theoremBPretorsion."
+    - source: "Pretorsion theories and image-closed subcategories, Theorem B, second identity"
+      lean: "PretorsionImageClosed.Challenge.theoremBImageClosed"
+      module: "Challenge"
+      status: "proved"
+      note: "Proved in Solution.lean from PretorsionImageClosed.theoremBImageClosed."
+
+acknowledgements: "Lean and Mathlib."

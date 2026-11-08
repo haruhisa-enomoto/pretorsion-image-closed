@@ -1,0 +1,52 @@
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, PretorsionImageClosed.Challenge.theoremA, PretorsionImageClosed.Challenge.completeLattice, PretorsionImageClosed.Challenge.gandhiPretorsion, PretorsionImageClosed.Challenge.gandhiImageClosed, PretorsionImageClosed.Challenge.theoremBPretorsion, PretorsionImageClosed.Challenge.theoremBImageClosed, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+⚠ [1956/2306] Replayed PretorsionImageClosed.Modules.FiniteModules
+warning: PretorsionImageClosed/Modules/FiniteModules.lean:46:0: automatically included section variable(s) unused in theorem `PretorsionImageClosed.FGModuleCat.epi_iff_surjective`:
+  [IsNoetherianRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsNoetherianRing R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PretorsionImageClosed/Modules/FiniteModules.lean:61:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PretorsionImageClosed/Modules/FiniteModules.lean:62:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PretorsionImageClosed/Modules/FiniteModules.lean:86:0: automatically included section variable(s) unused in theorem `PretorsionImageClosed.FGModuleCat.isZero_iff_subsingleton`:
+  [IsNoetherianRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsNoetherianRing R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2002/2306] Replayed PretorsionImageClosed.Length.Modules
+warning: PretorsionImageClosed/Length/Modules.lean:51:4: Unused tactic linter: `change moduleLength _ = moduleLength _` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PretorsionImageClosed/Length/Modules.lean:54:4: Unused tactic linter: `change moduleLength X < moduleLength Y` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PretorsionImageClosed/Length/Modules.lean:64:4: Unused tactic linter: `change moduleLength Y < moduleLength X` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+--
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, PretorsionImageClosed.Challenge.theoremA, PretorsionImageClosed.Challenge.completeLattice, PretorsionImageClosed.Challenge.gandhiPretorsion, PretorsionImageClosed.Challenge.gandhiImageClosed, PretorsionImageClosed.Challenge.theoremBPretorsion, PretorsionImageClosed.Challenge.theoremBImageClosed, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running con-ron kernel on solution
+con-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+con-ron: accepted 23534 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
