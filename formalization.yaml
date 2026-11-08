@@ -21,6 +21,7 @@ project:
   license: "Apache-2.0"
 
 classification:
+  arxiv: ["math.RT", "math.CT", "math.CO"]
   msc2020: ["16G20", "18E40", "05A15"]
 
 sources:
