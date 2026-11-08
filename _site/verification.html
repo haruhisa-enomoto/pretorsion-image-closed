@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verification · Pretorsion theories and image-closed subcategories</title><link rel="stylesheet" href="assets/site.css"></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><nav class="nav" aria-label="Main"><a class="brand" href="index.html">Pretorsion theories and image-closed subcategories</a><a href="index.html">Overview</a><a href="statement.html">Statement</a><a href="proof.html">Proof guide</a><a href="library.html">Library</a><a href="api.html">API</a><a href="verification.html">Verification</a><a href="https://github.com/haruhisa-enomoto/pretorsion-image-closed">GitHub</a></nav></header>
+<main id="main"><p class="eyebrow">Reproducibility</p><h1>Verification and provenance</h1>
+<p>The library and its independent statement compile with Lean 4.35.0-rc3. Their axiom reports contain only <code>propext</code>, <code>Classical.choice</code>, and <code>Quot.sound</code>. The six deliberate Challenge placeholders are not part of the proof.</p>
+<p>November 8, 2026 (commit e6e95f6, Lean v4.35.0-rc3, module system): build passed (2477 jobs including Challenge and Solution); axiom audit of 23 declarations passed with only propext, Classical.choice and Quot.sound, and a scan of all 1811 declarations found no other axiom. lake comparator check of the independent statements of Theorem A, Theorem 3.6, Theorems 7.5 and 8.5 and Theorem B passed with con-ron, NanoDa and Lean kernel replay. The hosted Palomar preflight has not been run yet.</p>
+<h2>Build the project</h2><pre><code>lake exe cache get
+lake build
+python3 scripts/audit_axioms.py
+python3 scripts/scan_axioms.py
+python3 scripts/generate_challenge.py --check
+lake build Challenge Solution</code></pre>
+<p>With Mathlib's cache in place, the library builds in about one minute on 20 hardware threads. Build <code>Challenge Solution</code> before independent comparison with <code>scripts/verify-comparator.sh</code>.</p>
+<h2>What has been reviewed</h2><p>No human expert or independent audit has reviewed the Lean statements or the proofs. Lean checks the proofs; the match between <code>Challenge.lean</code> and the paper is a human judgement.</p>
+<h2>Source and attribution</h2><p>The development is maintained by Haruhisa Enomoto. The provenance record describes AI contributions, source revisions and licences.</p>
+<p><a href="https://github.com/haruhisa-enomoto/pretorsion-image-closed/blob/32cf57f1cdcccad7d4614a850e06cdb1af759c68/PROVENANCE.md">Provenance</a> · <a href="https://github.com/haruhisa-enomoto/pretorsion-image-closed/blob/32cf57f1cdcccad7d4614a850e06cdb1af759c68/VENDORED.md">Reused source</a> · <a href="https://github.com/haruhisa-enomoto/pretorsion-image-closed/blob/32cf57f1cdcccad7d4614a850e06cdb1af759c68/docs/PAPER-CORRESPONDENCE.md">Paper correspondence</a></p>
+<p><a href="https://github.com/haruhisa-enomoto/pretorsion-image-closed/blob/32cf57f1cdcccad7d4614a850e06cdb1af759c68/docs/VERIFICATION.md">Detailed verification records and reproduction commands</a></p>
+</main><footer class="site-footer">Source: <a href="https://github.com/haruhisa-enomoto/pretorsion-image-closed/tree/32cf57f1cdcccad7d4614a850e06cdb1af759c68">32cf57f</a> · API: <a href="https://github.com/haruhisa-enomoto/pretorsion-image-closed/tree/32cf57f1cdcccad7d4614a850e06cdb1af759c68">32cf57f</a><br>Haruhisa Enomoto · Lean formalization · Apache-2.0</footer></body></html>
