@@ -21,8 +21,9 @@ them and does not import the Challenge.
 ## Results
 
 The [record of November 8, 2026](../verification/2026-11-08/README.md) gives the
-local results and the hashes. A hosted Palomar preflight needs the repository on
-GitHub and has not been run yet.
+local results and the hashes. The hosted Palomar preflight passed on commit
+`4690a5e` (run 42473438479), with NanoDa and con-ron accepting besides the Lean
+kernel; the Lean sources are those of the locally verified commit.
 
 No human expert has reviewed the Lean statements or the proofs. Lean checks the
 proofs; whether `Challenge.lean` says what the paper says is a human judgement.
