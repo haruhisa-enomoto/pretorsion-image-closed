@@ -30,6 +30,70 @@ iff `T ⊆ T'` and `F ⊇ F'`, form a complete lattice, with explicit meets and 
 where `B_m` and `C_m` are the `q`-Gandhi polynomials of Han and Zeng. Theorems 7.5
 and 8.5 refine these identities by a second variable `x`.
 
+The paper has two parts: a structural part for any finite-dimensional algebra
+(Theorem A, the lattice, realizations, and the convex geometry of image closure), and
+an enumerative part for the linearly oriented quiver of type A (Theorem B). Both are
+formalized.
+
+## Counting in type A
+
+Let `Λ_n` be the path algebra of `1 → 2 → ⋯ → n`. Theorem B counts the pretorsion
+theories `PT(Λ_n)` and the image-closed subcategories `L_im(Λ_n)` of `mod Λ_n`, each
+weighted by `q` to the number of indecomposables (in `T ∩ F`, and in the subcategory).
+The `q`-Gandhi polynomials are defined by `B_1 = C_1 = 1` and
+
+    B_m(x, q) = Δ_q(x² B_{m-1}(x, q)),   C_m(x, q) = (1 + qx) Δ_q(x C_{m-1}(x, q)),
+    Δ_q f(x) = (f(1 + qx) − f(x)) / (1 + (q − 1)x).
+
+At `q = 1`, the counts are the positive Genocchi numbers `g_{2n+4}` and the median
+Genocchi numbers `H_{2n+3}` ([OEIS A110501](https://oeis.org/A110501) and
+[A005439](https://oeis.org/A005439)):
+
+| `n` | 0 | 1 | 2 | 3 | 4 | 5 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| `\|PT(Λ_n)\|` | 1 | 3 | 17 | 155 | 2073 | 38227 |
+| `\|L_im(Λ_n)\|` | 1 | 2 | 8 | 56 | 608 | 9440 |
+
+For example, `B_3(1, q) = q³ + 4q² + 7q + 5` and `C_3(1, q) = q³ + 3q² + 3q + 1` for
+`n = 2`. The proof is combinatorial. Image-closed subcategories of `mod Λ_n`
+correspond to families of intervals in `{1, …, n}` closed under nonempty
+intersections (Theorem 5.5). Quotient-closed and submodule-closed subcategories
+are recorded by cutoff vectors, and Theorem 6.5 decides, vertex by vertex, which
+pairs of them form a pretorsion theory. Adjoining one vertex at a
+time gives the recurrences of `B` and `C` (Theorems 7.5 and 8.5).
+
+What Lean checks: the identities in `ℤ[q]` and their two-variable refinements, for
+every `n`. The table, the evaluation at `q = 1` and the identification with Genocchi
+numbers (`B_m(1,1) = g_{2m+2}`, `C_m(1,1) = H_{2m+1}`, classical results of Han and
+Zeng) are not formalized; the table was recomputed from the recurrences.
+
+## Context
+
+Pretorsion theories were introduced by Facchini and Finocchiaro for categories
+without a zero object, and developed for general categories by Facchini, Finocchiaro
+and Gran. In `mod Λ`, Campanini, Fedele and Yıldırım showed that the first and second
+components of pretorsion theories are exactly the quotient-closed and
+submodule-closed subcategories, and Campanini and Fedele constructed pretorsion
+theories whose intersection is a prescribed Serre subcategory. Theorem A determines
+all possible intersections. It parallels a result of Enomoto and Sakai: the
+subcategories closed under images and extensions are the intersections of a torsion
+class and a torsion-free class.
+
+The `q`-refinement follows the quotient–submodule equidistribution conjecture of
+Enomoto, which counts subcategories by their number of indecomposables. The counts
+link module categories of type A with Genocchi and median Genocchi numbers and the
+`q`-Gandhi polynomials of Han and Zeng. Pilaud also obtained the count `H_{2n+3}` for
+intersection-closed interval families. The proofs use recurrences; the paper knows
+no bijection with the Genocchi permutation models of Han and Zeng that preserves the
+statistics. The counts depend on the orientation of the quiver, and only the linear
+orientation is treated.
+
+The results concern two groups of readers: those working on the representation
+theory of finite-dimensional algebras, in particular torsion theory and lattices of
+subcategories, and those working in enumerative combinatorics on Genocchi numbers
+and Gandhi polynomials. The references are listed in
+[formalization.yaml](formalization.yaml).
+
 ## Start reading
 
 - [Main theorems](PretorsionImageClosed/MainTheorems.lean): `theoremA`,

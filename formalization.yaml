@@ -5,17 +5,20 @@ project:
   name: "Pretorsion theories and image-closed subcategories"
   description: >-
     A Lean 4 formalization, built on Mathlib, of the paper Pretorsion theories and
-    image-closed subcategories. For a finite-dimensional algebra Λ over a field, a
-    subcategory Z of mod Λ is image-closed iff Z = Gen Z ∩ Cogen Z iff Z = T ∩ F for
-    a pretorsion theory (T, F) (Theorem A), and the pretorsion theories of mod Λ
-    form a complete lattice with the meets and joins of the paper (Theorem 3.6).
-    For the linearly oriented quiver 1 → ⋯ → n, the pretorsion theories counted by
-    the number of indecomposables in T ∩ F, and the image-closed subcategories
-    counted by their number of indecomposables, are enumerated by the q-Gandhi
-    polynomials B_{n+1}(1, q) and C_{n+1}(1, q) of Han and Zeng (Theorem B), with
-    the two-variable refinements of Theorems 7.5 and 8.5. The library also proves
-    the other numbered statements of the paper, including the convex geometry of
-    image closure (Section 4.3), and the cited inputs they use.
+    image-closed subcategories, in two parts. Structure: for a finite-dimensional
+    algebra Λ over a field, a subcategory Z of mod Λ is image-closed iff
+    Z = Gen Z ∩ Cogen Z iff Z = T ∩ F for a pretorsion theory (T, F) (Theorem A),
+    and the pretorsion theories of mod Λ form a complete lattice with the meets and
+    joins of the paper (Theorem 3.6). Enumeration: for the linearly oriented quiver
+    1 → ⋯ → n, the pretorsion theories, weighted by q to the number of
+    indecomposables in T ∩ F, and the image-closed subcategories, weighted by q to
+    their number of indecomposables, sum to the q-Gandhi polynomials B_{n+1}(1, q)
+    and C_{n+1}(1, q) of Han and Zeng (Theorem B), with the two-variable
+    refinements of Theorems 7.5 and 8.5. At q = 1 these are the Genocchi numbers
+    g_{2n+4} and the median Genocchi numbers H_{2n+3}; that classical evaluation is
+    not formalized. The library also proves the other numbered statements of the
+    paper, including the convex geometry of image closure (Section 4.3), and the
+    cited inputs they use.
   authors: ["Haruhisa Enomoto"]
   responsible_maintainers: ["Haruhisa Enomoto"]
   license: "Apache-2.0"
@@ -55,6 +58,60 @@ sources:
       Source of the q-Gandhi polynomials of the second kind C_m, defined in
       Statement.lean by the recurrence of Definition 1.1 of the paper. The
       specialization C_m(1,1) = H_{2m+1} is not formalized.
+    author_endorsement: "not-contacted"
+
+  - title: "Pretorsion theories in general categories"
+    authors: ["A. Facchini", "C. A. Finocchiaro", "M. Gran"]
+    type: "paper"
+    location: "J. Pure Appl. Algebra 225 (2021), no. 2, Paper No. 106503"
+    relationship: "background"
+    note: >-
+      Definition 2.6 there is the paper's Definition 2.2, stated in Lean for an
+      arbitrary category; Propositions 2.1–2.2 there (the paper's Lemma 2.11) are
+      proved in the library. The notion was introduced by Facchini and Finocchiaro
+      (Ann. Mat. Pura Appl. 199 (2020), 1073–1089).
+    author_endorsement: "not-contacted"
+  - title: "Lattices of pretorsion classes"
+    authors: ["F. Campanini", "F. Fedele", "E. Yıldırım"]
+    type: "paper"
+    location: "arXiv:2511.19223v1 (2025)"
+    relationship: "background"
+    note: >-
+      Shows that the first and second components of pretorsion theories in
+      mod Λ are the quotient-closed and submodule-closed subcategories, and lists
+      the 17 pretorsion theories for type A_2. The closure properties used by the
+      paper (Lemma 2.6 and Proposition 2.8 there; the paper's Proposition 2.3)
+      are proved in the library.
+    author_endorsement: "not-contacted"
+  - title: "Preprojective modules over Artin algebras"
+    authors: ["M. Auslander", "S. O. Smalø"]
+    type: "paper"
+    location: "J. Algebra 66 (1980), no. 1, 61–122"
+    relationship: "background"
+    note: >-
+      Proposition 4.10(i), Z is image-closed iff Z = Gen Z ∩ Cogen Z, is part of
+      Theorem A and is proved in the library; splitting projective and injective
+      objects (Section 2) are used in Section 4.3.
+    author_endorsement: "not-contacted"
+  - title: "An equidistribution conjecture for quotient-closed and submodule-closed subcategories"
+    authors: ["Haruhisa Enomoto"]
+    type: "paper"
+    location: "arXiv:2608.18024v1 (2026)"
+    relationship: "background"
+    note: >-
+      Motivates counting subcategories by their number of indecomposables, and
+      supplies the convex geometry of quotient and submodule closure extended in
+      Section 4.3; its formalization is listed under related_formalizations.
+    author_endorsement: "participated"
+  - title: "Plumbing bijections"
+    authors: ["V. Pilaud"]
+    type: "paper"
+    location: "arXiv:2512.05001v2 (2025)"
+    relationship: "background"
+    note: >-
+      Also obtains the count H_{2n+3} for intersection-closed interval families,
+      which correspond to image-closed subcategories of mod Λ_n by Theorem 5.5.
+      Not used in the proofs.
     author_endorsement: "not-contacted"
 
 related_formalizations:

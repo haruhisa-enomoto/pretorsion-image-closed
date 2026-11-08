@@ -16,9 +16,12 @@
 <article class="card"><h3>Realizations</h3><p>The greatest and least realizations of an image-closed subcategory, and Theorem A (Theorem 4.4, Corollaries 4.5, 4.7, 4.9).</p><a href="{{source_url}}/PretorsionImageClosed/Realizations/TheoremA.lean">Theorem A</a></article>
 <article class="card"><h3>Convex geometry</h3><p>Image closure on indecomposable modules is a finitary convex geometry; its extreme points are the splitting projectives and injectives (Theorem 4.11, Proposition 4.13, Corollary 4.14).</p><a href="{{source_url}}/PretorsionImageClosed/IndecomposableClosures/ImageClosure.lean">Section 4.3</a></article>
 </div>
-<h2>Part IV: the linear quiver and Gandhi polynomials</h2>
+<h2 id="part-iv">Part IV: counting in type A</h2>
+<p>Sections 5–8 turn Theorem B into combinatorics of intervals in {1, …, <i>n</i>} and prove the Gandhi recurrences by adjoining one vertex at a time. The Lean development follows this plan; where it differs, the proof notes say how.</p>
 <div class="flow">
 <article class="card"><h3>Intervals</h3><p>Every representation is a direct sum of intervals, and image-closed subcategories are the intersection-closed interval families (Theorem 5.5).</p><a href="{{source_url}}/PretorsionImageClosed/LinearQuiver/ImageClosed.lean">Theorem 5.5</a></article>
 <article class="card"><h3>Cutoff coordinates</h3><p>Quotient-closed and submodule-closed subcategories by row and column cutoffs, and the criterion for pretorsion theories (Proposition 6.1, Theorem 6.5).</p><a href="{{source_url}}/PretorsionImageClosed/LinearQuiver/CutoffCriterion.lean">Theorem 6.5</a></article>
+<article class="card"><h3>Weights and column sums</h3><p>The weight x<sup>ρ</sup>q<sup>|ind(𝒯 ∩ ℱ)|</sup> read off from the cutoffs, and the sums over a new column evaluated by induction: ψ(R) = Δ<sub><i>q</i></sub>(x<sup>|R|+1</sup>) (Lemma 7.3) and θ(R) for image-closed families (8.5).</p><a href="{{source_url}}/PretorsionImageClosed/Gandhi/ColumnSum.lean">Column sums</a></article>
+<article class="card"><h3>The operator Δ<sub><i>q</i></sub></h3><p>Δ<sub><i>q</i></sub> is characterized by g · (1 + (q − 1)x) = f(1 + qx) − f(x) in ℤ[q][x]; its values on monomials (7.5) and existence give the Gandhi polynomials of both kinds.</p><a href="{{source_url}}/PretorsionImageClosed/Gandhi/Delta.lean">Gandhi polynomials</a></article>
 <article class="card"><h3>Adjoining a vertex</h3><p>Restriction to the first vertices, fibre sums and the Gandhi recurrences (Theorems 7.5 and 8.5, Theorem B).</p><a href="{{source_url}}/PretorsionImageClosed/LinearQuiver/CutoffRestriction.lean">Theorem 7.5</a></article>
 </div>
