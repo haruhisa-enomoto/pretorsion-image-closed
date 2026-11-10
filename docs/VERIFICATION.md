@@ -22,8 +22,10 @@ them and does not import the Challenge.
 
 The [record of November 8, 2026](../verification/2026-11-08/README.md) gives the
 local results and the hashes. The hosted Palomar preflight passed on commit
-`4690a5e` (run 42473438479), with NanoDa and con-ron accepting besides the Lean
-kernel; the Lean sources are those of the locally verified commit.
+`4690a5e` (run 42473438479), and again on `da7ea8e`, which cites the posted paper
+(run 42842279381, [record](../verification/2026-11-11-hexagon/README.md)), with
+NanoDa and con-ron accepting besides the Lean kernel; the Lean sources are those of
+the locally verified commit.
 
 No human expert has reviewed the Lean statements or the proofs. Lean checks the
 proofs; whether `Challenge.lean` says what the paper says is a human judgement.
