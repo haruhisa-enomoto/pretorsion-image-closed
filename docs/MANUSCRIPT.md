@@ -1,9 +1,11 @@
 # The formalized manuscript
 
 The formalization follows *Pretorsion theories and image-closed subcategories* by
-Haruhisa Enomoto, in the version prepared for submission on November 8, 2026. It has
-not yet been posted to arXiv or Hexagon; this record will name the public version
-when there is one.
+Haruhisa Enomoto, [hexagon:2611.00207v1](https://hexagonmath.org/2611.00207v1) (version 1, November 10, 2026,
+CC BY 4.0). The formalization was made from the version prepared for submission on
+November 8, 2026; the TeX source posted as hexagon:2611.00207v1 is byte-identical to
+it (the `main.tex` hash below, checked on November 11, 2026). The PDF hash below is
+that of the author's build; Hexagon's own PDF build differs in its bytes.
 
 Statement numbers and `main.tex` line numbers in the
 [correspondence](PAPER-CORRESPONDENCE.md) refer to this version, a single-file

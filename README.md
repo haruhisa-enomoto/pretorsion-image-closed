@@ -1,13 +1,15 @@
 # Pretorsion theories and image-closed subcategories
 
 [Website](https://haruhisa-enomoto.github.io/pretorsion-image-closed/) ·
+[Paper](https://hexagonmath.org/2611.00207v1) ·
 [Main theorems in Lean](PretorsionImageClosed/MainTheorems.lean) ·
 [Independent statement](PretorsionImageClosed/Statement.lean) ·
 [Paper correspondence](docs/PAPER-CORRESPONDENCE.md)
 
 This repository contains a Lean 4 formalization of the paper *Pretorsion theories
-and image-closed subcategories* by Haruhisa Enomoto, including the cited inputs that
-it uses. The formalized version is identified in [MANUSCRIPT.md](docs/MANUSCRIPT.md).
+and image-closed subcategories* by Haruhisa Enomoto
+([hexagon:2611.00207v1](https://hexagonmath.org/2611.00207v1)), including the cited inputs that it uses. The
+formalized version is identified in [MANUSCRIPT.md](docs/MANUSCRIPT.md).
 
 Let `Λ` be a finite-dimensional algebra over a field `k`, and `mod Λ` its category of
 finite-dimensional right modules. A *pretorsion theory* `(T, F)` generalizes a torsion

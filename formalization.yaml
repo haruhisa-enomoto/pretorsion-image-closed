@@ -31,13 +31,14 @@ sources:
   - title: "Pretorsion theories and image-closed subcategories"
     authors: ["Haruhisa Enomoto"]
     type: "paper"
-    location: "Manuscript of November 8, 2026, not yet posted; identified by SHA-256 in docs/MANUSCRIPT.md"
+    location: "https://hexagonmath.org/2611.00207v1"
     relationship: "formalizes"
     note: >-
       The formalized paper, researched under the author's direction with
       GPT-5.6-Sol and GPT-6-Astra and written with GPT-6-Astra, Claude Opus 5.5
       and Gemini 4 Argon. Statements are matched with Lean declarations in
-      docs/PAPER-CORRESPONDENCE.md.
+      docs/PAPER-CORRESPONDENCE.md. The posted TeX source of hexagon:2611.00207v1
+      is byte-identical to the formalized version (SHA-256 in docs/MANUSCRIPT.md).
     author_endorsement: "participated"
   - title: "q-Polynômes de Gandhi et statistique de Denert"
     authors: ["G.-N. Han", "J. Zeng"]
