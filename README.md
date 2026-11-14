@@ -177,7 +177,13 @@ The repository follows the layout of the
 [comparator.json](comparator.json) and the metadata in
 [formalization.yaml](formalization.yaml). The workflow
 [Palomar preflight](.github/workflows/palomar-preflight.yml) runs Palomar's
-mechanical verification for a chosen commit.
+mechanical verification for a chosen commit. It
+[passed](verification/2026-11-11-hexagon/README.md) for commit `da7ea8e`.
+
+Commit `da7ea8e` is registered as
+[PALOMAR-2026-11-14-000015](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-14-000015&version=1):
+Palomar's mechanical verification passed, and its editorial review identified no blocking
+problem. Palomar is a registry, not a journal; the review is not a human expert review.
 
 ## Website
 

@@ -6,5 +6,8 @@
 - [2026-11-11-hexagon](2026-11-11-hexagon/README.md): the paper posted as
   hexagon:2611.00207v1 (source identical to the formalized version) is cited;
   hosted Palomar preflight passed (run 42842279381) on `da7ea8e`.
+  Commit `da7ea8e` is registered on Palomar as
+  [PALOMAR-2026-11-14-000015](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-14-000015&version=1)
+  (2026-11-14).
 
 [`module-origins.json`](module-origins.json) records the origin of reused modules.
